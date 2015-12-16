@@ -4,6 +4,8 @@
  */
 'use strict';
 
+import Radio from 'react-native-simple-radio-button';
+
 var React = require('react-native');
 var {
   AppRegistry,
@@ -12,24 +14,29 @@ var {
   View,
 } = React;
 
+
 var RadioButtonProject = React.createClass({
+  getInitialState: function() {
+    return {
+      types: [{label: 'param1', value: 0}, {label: 'param2', value: 1},],
+      value: 0,
+    }
+  },
   render: function() {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>
-          Welcome to React Native!
-        </Text>
-        <Text style={styles.instructions}>
-          To get started, edit index.ios.js
-        </Text>
-        <Text style={styles.instructions}>
-          Press Cmd+R to reload,{'\n'}
-          Cmd+D or shake for dev menu
-        </Text>
+        <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
+        <Radio
+          radio_props={this.state.types}
+          initial={0}
+          onPress={(value) => {this.setState({value:value})}}
+        />
+        <Text>selected: {this.state.types[parseInt(this.state.value)].label}</Text>
       </View>
     );
   }
 });
+
 
 var styles = StyleSheet.create({
   container: {
