@@ -1,6 +1,6 @@
 {
   "name": "react-native-simple-radio-button",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple and useful radio button component for React Native",
   "main": "index.js",
   "directories": {
