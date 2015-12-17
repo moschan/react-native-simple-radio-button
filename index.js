@@ -12,7 +12,7 @@ var Radio = React.createClass({
     var that = this;
     return {
       is_active_index: this.props.initial,
-    }
+    };
   },
   getDefaultProps: function() {
     return {
