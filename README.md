@@ -3,6 +3,8 @@ simple and useful radio button component for React Native
 
 [![NPM](https://nodei.co/npm/react-native-simple-radio-button.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/react-native-simple-radio-button/)
 
+![Demo](./images/demo.gif)
+
 # Installation
 
 in Cli
