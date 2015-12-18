@@ -14,8 +14,10 @@
     "url": "git+https://github.com/moschan/react-native-simple-radio-button.git"
   },
   "keywords": [
+    "react-component",
     "react-native",
-    "radio-button"
+    "ios",
+    "android"
   ],
   "author": "moschan <kaityo02＠gmail.com> (http://moschan.com/blog/)",
   "license": "MIT",
