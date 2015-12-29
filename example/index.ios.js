@@ -29,6 +29,9 @@ var RadioButtonProject = React.createClass({
         <Radio
           radio_props={this.state.types}
           initial={0}
+          formHorizontal={false}
+          labelHorizontal={true}
+          buttonColor={'#2196f3'}
           onPress={(value) => {this.setState({value:value})}}
         />
         <Text>selected: {this.state.types[parseInt(this.state.value)].label}</Text>
