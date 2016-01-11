@@ -5,6 +5,7 @@
 'use strict';
 
 import Radio from 'react-native-simple-radio-button';
+// import Radio from './index.js';
 
 var React = require('react-native');
 var {
@@ -32,6 +33,7 @@ var RadioButtonProject = React.createClass({
           formHorizontal={false}
           labelHorizontal={true}
           buttonColor={'#2196f3'}
+          animation={true}
           onPress={(value) => {this.setState({value:value})}}
         />
         <Text>selected: {this.state.types[parseInt(this.state.value)].label}</Text>
