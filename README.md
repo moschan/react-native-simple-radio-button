@@ -105,6 +105,17 @@ change radio button color
 
 ![Demo](./doc/button_color.jpg)
 
+## labelColor(Default: '#000')
+change label color 
+
+```
+<Radio
+  radio_props={radio_props}
+  initial={0}
+  labelColor={'#50C900'}
+/>
+```
+
 
 ## formHoriozntal(Default: false)
 change form position
@@ -132,6 +143,11 @@ change label position
 ```
 
 ![Demo](./doc/label_horizontal.jpg)
+
+## animation (Default: `true`)
+if you pass false, animation of radio button is disabled
+
+![Demo](./doc/demo_1.gif)
 
 ## animation (Default: `true`)
 if you pass false, animation of radio button is disabled
