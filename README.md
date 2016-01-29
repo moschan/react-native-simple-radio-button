@@ -9,7 +9,11 @@
 Demo
 ---
 
-![Demo](./doc/demo_1.gif)![Demo](./doc/demo_2.gif)![Demo](./doc/demo_3.gif)![Demo](./doc/demo_4.gif)
+![Demo](./doc/demo_1.gif)
+
+![Demo](./doc/demo_2.gif)
+
+![Demo](./doc/demo_4.gif)
 
 # Installation
 
@@ -22,7 +26,7 @@ npm i react-native-simple-radio-button
 in JavaScirpt
 
 ```
-import Radio from 'react-native-simple-radio-button';
+import Radio from 'react-native-simple-radio-button'
 ```
 
 
