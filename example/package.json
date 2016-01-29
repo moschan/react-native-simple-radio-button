@@ -9,6 +9,6 @@
     "react-native": "^0.16.0"
   },
   "devDependencies": {
-    "react-native-simple-radio-button": "1.1.0"
+    "react-native-simple-radio-button": "1.2.0"
   }
 }

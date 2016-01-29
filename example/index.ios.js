@@ -33,6 +33,7 @@ var RadioButtonProject = React.createClass({
           formHorizontal={false}
           labelHorizontal={true}
           buttonColor={'#2196f3'}
+          labelColor={'#000'}
           animation={true}
           onPress={(value) => {this.setState({value:value})}}
         />
