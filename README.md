@@ -9,11 +9,7 @@
 Demo
 ---
 
-![Demo](./doc/demo_1.gif)
-
-![Demo](./doc/demo_2.gif)
-
-![Demo](./doc/demo_4.gif)
+![Demo](./doc/ver1.3_demo.gif)
 
 # Installation
 
@@ -26,7 +22,7 @@ npm i react-native-simple-radio-button
 in JavaScirpt
 
 ```
-import Radio from 'react-native-simple-radio-button'
+import Radio, {RadioButton} from 'react-native-simple-radio-button'
 ```
 
 
@@ -82,21 +78,54 @@ Customized
 />
 ```
 
+More Customized
+---
+```
+<Radio
+  formHorizontal={true}
+  animation={true}
+>
+  {this.state.types.map((obj, i) => {
+    var that = this
+    var is_selected = this.state.isSelected == i;
+    return (
+      <View style={styles.radioButtonWrap}>
+        <RadioButton
+          isSelected={is_selected}
+          obj={obj}
+          key={i}
+          labelHorizontal={false}
+          buttonColor={'#2196f3'}
+          labelColor={'#000'}
+          style={styles.radioStyle}
+          onPress={(value) => {
+            this.setState({value:value})
+            that.setState({isSelected: i})
+          }}
+        />
+      </View>
+    )
+  })}
+</Radio>
+```
+
 
 # Props
 
-## radio_props (Default: `[]`) _*required_
+
+## Radio Component
+### radio_props (Default: `[]`) _*required_
 radio button value and label array
 
-## onPress _*required_
+### onPress _*required_
 callback when radio button clicked. 
 
-## initial (Default: `0`)
+### initial (Default: `0`)
 initial selected
 
 
 
-## buttonColor(Default: '#2196f3')
+### buttonColor(Default: '#2196f3')
 change radio button color 
 
 ```
@@ -109,7 +138,7 @@ change radio button color
 
 ![Demo](./doc/button_color.jpg)
 
-## labelColor(Default: '#000')
+### labelColor(Default: '#000')
 change label color 
 
 ```
@@ -121,7 +150,7 @@ change label color
 ```
 
 
-## formHoriozntal(Default: false)
+### formHoriozntal(Default: false)
 change form position
 
 ```
@@ -135,7 +164,7 @@ change form position
 ![Demo](./doc/form_horizontal.jpg)
 
 
-## labelHoriozntal(Default: true)
+### labelHoriozntal(Default: true)
 change label position
 
 ```
@@ -148,15 +177,41 @@ change label position
 
 ![Demo](./doc/label_horizontal.jpg)
 
-## animation (Default: `true`)
+### animation (Default: `true`)
 if you pass false, animation of radio button is disabled
 
 ![Demo](./doc/demo_1.gif)
 
-## animation (Default: `true`)
+### animation (Default: `true`)
 if you pass false, animation of radio button is disabled
 
 ![Demo](./doc/demo_1.gif)
+
+
+## RadioButton Component
+### isSelected
+If you pass `true` to this param, that button change to selected status.
+
+
+### labelHorizontal
+change label position
+
+
+### buttonColor
+The button color
+
+### labelColor
+The label color
+
+### style
+The label style
+
+## onPress _*required_
+callback when radio button clicked. 
+
+
+
+
 
 # Contributing
 Of course! Welcome :)
