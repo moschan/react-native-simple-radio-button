@@ -19,11 +19,12 @@ var {
 var RadioButtonProject = React.createClass({
   getInitialState: function() {
     return {
-      types1: [{label: 'param1', value: 0}, {label: 'param2', value: 1},],
+      types1: [{label: 'param1', value: 0}, {label: 'param2', value: 1}],
       value1: 0,
+      value1Index: 0,
       types2: [{label: 'param1', value: 0}, {label: 'param2', value: 1}, {label: 'param3', value: 2},],
       value2: 0,
-      isSelected: 0,
+      value2Index: 0,
     }
   },
   render: function() {
@@ -40,10 +41,13 @@ var RadioButtonProject = React.createClass({
             buttonColor={'#2196f3'}
             labelColor={'#000'}
             animation={true}
-            onPress={(value) => {this.setState({value1:value})}}
+            onPress={(value, index) => {
+              this.setState({value1:value})
+              this.setState({value1Index:index})
+            }}
           />
         </View>
-        <Text>selected: {this.state.types1[parseInt(this.state.value1)].label}</Text>
+        <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
 
 
         <Text style={styles.welcome}>2. Customizable Example</Text>
@@ -54,20 +58,20 @@ var RadioButtonProject = React.createClass({
           >
             {this.state.types2.map((obj, i) => {
               var that = this;
-              var is_selected = this.state.isSelected == i;
+              var is_selected = this.state.value2Index == i;
               return (
-                <View style={styles.radioButtonWrap}>
+                <View key={i} style={styles.radioButtonWrap}>
                   <RadioButton
                     isSelected={is_selected}
                     obj={obj}
-                    key={i}
+                    index={i}
                     labelHorizontal={false}
                     buttonColor={'#2196f3'}
                     labelColor={'#000'}
                     style={i !== this.state.types2.length-1 && styles.radioStyle}
-                    onPress={(value) => {
+                    onPress={(value, index) => {
                       this.setState({value2:value})
-                      that.setState({isSelected: i});
+                      this.setState({value2Index: index});
                     }}
                   />
                 </View>
@@ -75,7 +79,7 @@ var RadioButtonProject = React.createClass({
             })}
           </Radio>
         </View>
-        <Text>selected: {this.state.types2[parseInt(this.state.value2)].label}</Text>
+        <Text>selected: {this.state.types2[this.state.value2Index].label}</Text>
 
       </View>
     );
