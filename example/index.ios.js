@@ -4,8 +4,8 @@
  */
 'use strict';
 
-import Radio, {RadioButton} from 'react-native-simple-radio-button';
-// import Radio, {RadioButton} from './index.js';
+// import Radio, {RadioButton} from 'react-native-simple-radio-button';
+import RadioForm, {RadioButton} from './index.js';
 
 var React = require('react-native');
 var {
@@ -36,7 +36,7 @@ var RadioButtonProject = React.createClass({
         <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
         <Text style={styles.welcome}>1. Simple Example</Text>
         <View style={styles.component}>
-          <Radio
+          <RadioForm
             radio_props={this.state.types1}
             initial={0}
             formHorizontal={false}
@@ -55,7 +55,7 @@ var RadioButtonProject = React.createClass({
 
         <Text style={styles.welcome}>2. Customizable Example</Text>
         <View style={styles.component}>
-          <Radio
+          <RadioForm
             formHorizontal={true}
             animation={true}
           >
@@ -80,13 +80,13 @@ var RadioButtonProject = React.createClass({
                 </View>
               )
             })}
-          </Radio>
+          </RadioForm>
         </View>
         <Text>selected: {this.state.types2[this.state.value2Index].label}</Text>
 
         <Text style={styles.welcome}>3. label left example</Text>
         <View style={styles.component}>
-          <Radio
+          <RadioForm
             formHorizontal={false}
             animation={true}
           >
@@ -111,7 +111,7 @@ var RadioButtonProject = React.createClass({
                 </View>
               )
             })}
-          </Radio>
+          </RadioForm>
         </View>
         <Text>selected: {this.state.types3[this.state.value3Index].label}</Text>
 
