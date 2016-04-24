@@ -4,8 +4,8 @@
  */
 'use strict';
 
-// import Radio, {RadioButton} from 'react-native-simple-radio-button';
-import RadioForm, {RadioButton} from './index.js';
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
 
 var React = require('react-native');
 var {
@@ -34,7 +34,7 @@ var RadioButtonProject = React.createClass({
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
-        <Text style={styles.welcome}>1. Simple Example</Text>
+        <Text style={styles.welcome}>1. Basic</Text>
         <View style={styles.component}>
           <RadioForm
             radio_props={this.state.types1}
@@ -51,9 +51,7 @@ var RadioButtonProject = React.createClass({
           />
         </View>
         <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
-
-
-        <Text style={styles.welcome}>2. Customizable Example</Text>
+        <Text style={styles.welcome}>2. Advanced</Text>
         <View style={styles.component}>
           <RadioForm
             formHorizontal={true}
@@ -84,31 +82,39 @@ var RadioButtonProject = React.createClass({
         </View>
         <Text>selected: {this.state.types2[this.state.value2Index].label}</Text>
 
-        <Text style={styles.welcome}>3. label left example</Text>
+        <Text style={styles.welcome}>3. Pro</Text>
         <View style={styles.component}>
-          <RadioForm
-            formHorizontal={false}
-            animation={true}
-          >
+          <RadioForm formHorizontal={true} animation={true} >
             {this.state.types3.map((obj, i) => {
-              var that = this;
-              var is_selected = this.state.value3Index == i;
+              var onPress = (value, index) => {
+                  this.setState({
+                    value3: value,
+                    value3Index: index
+                  })
+                }
               return (
-                <View key={i} style={styles.radioButtonWrap}>
-                  <RadioButton
-                    isSelected={is_selected}
+                <RadioButton labelHorizontal={true} key={i} >
+                  {/*  You can set RadioButtonLabel before RadioButtonInput */}
+                  <RadioButtonInput
+                    obj={obj}
+                    index={i}
+                    isSelected={this.state.value3Index === i}
+                    onPress={onPress}
+                    buttonInnerColor={'#e74c3c'}
+                    buttonOuterColor={'#2196f3'}
+                    buttonSize={40}
+                    buttonStyle={{}}
+                    buttonWrapStyle={{marginLeft: 10}}
+                  />
+                  <RadioButtonLabel
                     obj={obj}
                     index={i}
                     labelHorizontal={true}
-                    labelStyle={{position: 'absolute', left: -35}}
-                    buttonColor={'#2196f3'}
-                    labelColor={'#000'}
-                    onPress={(value, index) => {
-                      this.setState({value3:value})
-                      this.setState({value3Index: index});
-                    }}
+                    onPress={onPress}
+                    labelStyle={{fontSize: 20, color: '#2ecc71'}}
+                    labelWrapStyle={{}}
                   />
-                </View>
+                </RadioButton>
               )
             })}
           </RadioForm>
