@@ -1,7 +1,7 @@
-import RadioForm, {RadioButton} from './lib/SimpleRadioButton.js'
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './lib/SimpleRadioButton.js'
 // module.exports = Radio
 // module.exports = RadioButton
 
 
 export default RadioForm
-export {RadioButton}
+export {RadioButton, RadioButtonInput, RadioButtonLabel}
