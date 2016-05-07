@@ -101,7 +101,7 @@ var RadioButtonProject = React.createClass({
                     isSelected={this.state.value3Index === i}
                     onPress={onPress}
                     buttonInnerColor={'#e74c3c'}
-                    buttonOuterColor={'#2196f3'}
+                    buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
                     buttonSize={40}
                     buttonStyle={{}}
                     buttonWrapStyle={{marginLeft: 10}}
