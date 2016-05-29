@@ -1,24 +1,24 @@
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
+ * @flow
  */
-'use strict';
 
-import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
-
-var React = require('react-native');
-var {
+import React, { Component } from 'react';
+import {
   AppRegistry,
   StyleSheet,
   Text,
-  View,
-} = React;
+  View
+} from 'react-native';
 
+// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
 
-var RadioButtonProject = React.createClass({
-  getInitialState: function() {
-    return {
+class RadioButtonExample extends Component {
+  constructor () {
+    super()
+    this.state = {
       types1: [{label: 'param1', value: 0}, {label: 'param2', value: 1}],
       value1: 0,
       value1Index: 0,
@@ -29,8 +29,8 @@ var RadioButtonProject = React.createClass({
       value3: 0,
       value3Index: 0,
     }
-  },
-  render: function() {
+  }
+  render () {
     return (
       <View style={styles.container}>
         <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
@@ -124,10 +124,9 @@ var RadioButtonProject = React.createClass({
       </View>
     );
   }
-});
+}
 
-
-var styles = StyleSheet.create({
+const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
@@ -157,4 +156,4 @@ var styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('RadioButtonProject', () => RadioButtonProject);
+AppRegistry.registerComponent('RadioButtonExample', () => RadioButtonExample);

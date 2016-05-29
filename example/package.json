@@ -1,15 +1,13 @@
 {
-  "name": "RadioButtonProject",
+  "name": "RadioButtonExample",
   "version": "0.0.1",
   "private": true,
   "scripts": {
     "start": "react-native start"
   },
   "dependencies": {
-    "react-native": "^0.18.0",
-    "react": "^0.14.5"
-  },
-  "devDependencies": {
-    "react-native-simple-radio-button": "2.0.1"
+    "react": "^15.0.2",
+    "react-native": "^0.26.2",
+    "react-native-simple-radio-button": "2.0.2"
   }
 }
