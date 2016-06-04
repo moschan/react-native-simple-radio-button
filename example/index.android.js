@@ -12,8 +12,8 @@ import {
   View
 } from 'react-native';
 
-// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
+// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
 
 class RadioButtonExample extends Component {
   constructor () {
