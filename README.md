@@ -22,7 +22,7 @@ npm i react-native-simple-radio-button
 in JavaScirpt
 
 ```
-import Radio, {RadioButton} from 'react-native-simple-radio-button'
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 ```
 
 
@@ -53,10 +53,10 @@ var RadioButtonProject = React.createClass({
 });
 ```
 
-Simple
+Basic
 ---
 ```
-<Radio
+<RadioForm
   radio_props={radio_props}
   initial={0}
   onPress={(value) => {this.setState({value:value})}}
@@ -64,10 +64,10 @@ Simple
 
 ```
 
-Customized
+Advanced
 ---
 ```
-<Radio
+<RadioForm
   radio_props={this.state.types}
   initial={0}
   formHorizontal={false}
@@ -78,42 +78,43 @@ Customized
 />
 ```
 
-More Customized
+Pro
 ---
 ```
-<Radio
+<RadioForm
   formHorizontal={true}
   animation={true}
 >
-  {this.state.types.map((obj, i) => {
-    var that = this
-    var is_selected = this.state.isSelected == i;
-    return (
-      <View style={styles.radioButtonWrap}>
-        <RadioButton
-          isSelected={is_selected}
-          obj={obj}
-          key={i}
-          labelHorizontal={false}
-          buttonColor={'#2196f3'}
-          labelColor={'#000'}
-          style={styles.radioStyle}
-          onPress={(value) => {
-            this.setState({value:value})
-            that.setState({isSelected: i})
-          }}
-        />
-      </View>
-    )
-  })}
-</Radio>
+  <RadioButton labelHorizontal={true} key={i} >
+    {/*  You can set RadioButtonLabel before RadioButtonInput */}
+    <RadioButtonInput
+      obj={obj}
+      index={i}
+      isSelected={this.state.value3Index === i}
+      onPress={onPress}
+      buttonInnerColor={'#e74c3c'}
+      buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
+      buttonSize={40}
+      buttonStyle={{}}
+      buttonWrapStyle={{marginLeft: 10}}
+    />
+    <RadioButtonLabel
+      obj={obj}
+      index={i}
+      labelHorizontal={true}
+      onPress={onPress}
+      labelStyle={{fontSize: 20, color: '#2ecc71'}}
+      labelWrapStyle={{}}
+    />
+  </RadioButton>
+</RadioForm>
 ```
 
 
 # Props
 
 
-## Radio Component
+## RadioForm Component
 ### radio_props (Default: `[]`) _*required_
 radio button value and label array
 
@@ -209,8 +210,9 @@ The label style
 ## onPress _*required_
 callback when radio button clicked. 
 
+# RadioButtonInput
 
-
+# RadioButtonLabel
 
 
 # Contributing
