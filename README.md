@@ -42,6 +42,7 @@ var RadioButtonProject = React.createClass({
   },
   render: function() {
     return (
+      <View>
         <Radio
           radio_props={radio_props}
           initial={0}
@@ -119,7 +120,7 @@ Pro
 radio button value and label array
 
 ### onPress _*required_
-callback when radio button clicked. 
+callback when radio button clicked.
 
 ### initial (Default: `0`)
 initial selected
@@ -127,7 +128,7 @@ initial selected
 
 
 ### buttonColor(Default: '#2196f3')
-change radio button color 
+change radio button color
 
 ```
 <Radio
@@ -140,7 +141,7 @@ change radio button color
 ![Demo](./doc/button_color.jpg)
 
 ### labelColor(Default: '#000')
-change label color 
+change label color
 
 ```
 <Radio
@@ -208,7 +209,7 @@ The label color
 The label style
 
 ## onPress _*required_
-callback when radio button clicked. 
+callback when radio button clicked.
 
 # RadioButtonInput
 
