@@ -16,19 +16,16 @@ Demo
 in Cli
 
 ```
-npm i react-native-simple-radio-button
+npm i react-native-simple-radio-button --save
 ```
 
-in JavaScirpt
+
+# Example Usage
 
 ```
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-```
 
 
-# Usage
-
-```
 var radio_props = [
   {label: 'param1', value: 0 },
   {label: 'param2', value: 1 }
@@ -211,7 +208,15 @@ The label style
 ## onPress _*required_
 callback when radio button clicked.
 
+
 # RadioButtonInput
+### isSelected
+### onPress
+### buttonInnerColor
+### buttonOuterColor
+### buttonSize
+### buttonStyle
+### buttonWrapStyle
 
 # RadioButtonLabel
 
