@@ -11,7 +11,8 @@ Demo
 
 ![Demo](./doc/ver1.3_demo.gif)
 
-# Installation
+
+## Installation
 
 in Cli
 
@@ -20,7 +21,7 @@ npm i react-native-simple-radio-button --save
 ```
 
 
-# Example Usage
+# Getting started
 
 ```
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
@@ -219,6 +220,10 @@ callback when radio button clicked.
 ### buttonWrapStyle
 
 # RadioButtonLabel
+### labelHorizontal
+### labelStyle
+### labelWrapStyle
+### onPress
 
 
 # Contributing
