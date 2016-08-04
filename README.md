@@ -223,7 +223,7 @@ callback when radio button clicked.
 ### labelHorizontal
 ### labelStyle
 ### labelWrapStyle
-### onPress
+### onPress _*required_
 
 
 # Contributing
