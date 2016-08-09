@@ -41,7 +41,7 @@ var RadioButtonProject = React.createClass({
   render: function() {
     return (
       <View>
-        <Radio
+        <RadioForm
           radio_props={radio_props}
           initial={0}
           onPress={(value) => {this.setState({value:value})}}
@@ -128,7 +128,8 @@ initial selected
 change radio button color
 
 ```js
-<Radio
+<RadioForm
+>>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   buttonColor={'#50C900'}
@@ -141,7 +142,8 @@ change radio button color
 change label color
 
 ```js
-<Radio
+<RadioForm
+>>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   labelColor={'#50C900'}
@@ -167,7 +169,8 @@ change form position
 change label position
 
 ```js
-<Radio
+<RadioForm
+>>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   labelHorizontal={false}
