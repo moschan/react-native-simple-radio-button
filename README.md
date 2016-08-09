@@ -129,7 +129,6 @@ change radio button color
 
 ```js
 <RadioForm
->>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   buttonColor={'#50C900'}
@@ -143,7 +142,6 @@ change label color
 
 ```js
 <RadioForm
->>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   labelColor={'#50C900'}
@@ -170,7 +168,6 @@ change label position
 
 ```js
 <RadioForm
->>>>>>> Stashed changes
   radio_props={radio_props}
   initial={0}
   labelHorizontal={false}
