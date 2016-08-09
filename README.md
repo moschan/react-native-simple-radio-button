@@ -91,6 +91,7 @@ Pro
       index={i}
       isSelected={this.state.value3Index === i}
       onPress={onPress}
+      borderWidth={1}
       buttonInnerColor={'#e74c3c'}
       buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
       buttonSize={40}
