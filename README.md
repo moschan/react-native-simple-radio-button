@@ -16,14 +16,14 @@ Demo
 
 in Cli
 
-```
+```sh
 npm i react-native-simple-radio-button --save
 ```
 
 
 # Getting started
 
-```
+```js
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
 
@@ -54,18 +54,19 @@ var RadioButtonProject = React.createClass({
 
 Basic
 ---
-```
+
+```js
 <RadioForm
   radio_props={radio_props}
   initial={0}
   onPress={(value) => {this.setState({value:value})}}
 />
-
 ```
 
 Advanced
 ---
-```
+
+```js
 <RadioForm
   radio_props={this.state.types}
   initial={0}
@@ -79,7 +80,8 @@ Advanced
 
 Pro
 ---
-```
+
+```js
 <RadioForm
   formHorizontal={true}
   animation={true}
@@ -110,9 +112,7 @@ Pro
 </RadioForm>
 ```
 
-
 # Props
-
 
 ## RadioForm Component
 ### radio_props (Default: `[]`) _*required_
@@ -124,12 +124,10 @@ callback when radio button clicked.
 ### initial (Default: `0`)
 initial selected
 
-
-
 ### buttonColor(Default: '#2196f3')
 change radio button color
 
-```
+```js
 <Radio
   radio_props={radio_props}
   initial={0}
@@ -142,7 +140,7 @@ change radio button color
 ### labelColor(Default: '#000')
 change label color
 
-```
+```js
 <Radio
   radio_props={radio_props}
   initial={0}
@@ -151,28 +149,28 @@ change label color
 ```
 
 
-### formHoriozntal(Default: false)
+### formHorizontal(Default: false)
 change form position
 
-```
+```js
 <Radio
   radio_props={radio_props}
   initial={0}
-  formHoriozntal={true}
+  formHorizontal={true}
 />
 ```
 
 ![Demo](./doc/form_horizontal.jpg)
 
 
-### labelHoriozntal(Default: true)
+### labelHorizontal(Default: true)
 change label position
 
-```
+```js
 <Radio
   radio_props={radio_props}
   initial={0}
-  labelHoriozntal={false}
+  labelHorizontal={false}
 />
 ```
 
