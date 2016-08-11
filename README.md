@@ -153,7 +153,7 @@ change label color
 change form position
 
 ```js
-<Radio
+<RadioForm
   radio_props={radio_props}
   initial={0}
   formHorizontal={true}
