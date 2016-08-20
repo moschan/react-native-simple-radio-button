@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "react-native start"
+    "start": "react-native start",
+    "sync": "rm -rf ./node_modules/react-native-simple-radio-button; sane '/usr/bin/rsync -v -a --exclude .git --exclude example --exclude node_modules ../ ./node_modules/react-native-simple-radio-button/' .. --glob='{**/*.json,**/*.js}'"
   },
   "dependencies": {
     "react": "15.0.2",
