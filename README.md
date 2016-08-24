@@ -191,10 +191,8 @@ if you pass false, animation of radio button is disabled
 ### isSelected
 If you pass `true` to this param, that button change to selected status.
 
-
 ### labelHorizontal
-change label position
-
+change label position to horizontal
 
 ### buttonColor
 The button color
@@ -213,10 +211,19 @@ callback when radio button clicked.
 ### isSelected
 ### onPress
 ### buttonInnerColor
+The button inner color
+
 ### buttonOuterColor
+The button inner color
+
 ### buttonSize
+The button size. Width and height will be same length.
+
 ### buttonStyle
+Custom button style
+
 ### buttonWrapStyle
+Custom style for view of button's outside
 
 # RadioButtonLabel
 
