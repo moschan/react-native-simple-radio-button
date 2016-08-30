@@ -97,6 +97,7 @@ Pro
       buttonInnerColor={'#e74c3c'}
       buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
       buttonSize={40}
+      buttonOuterSize={80}
       buttonStyle={{}}
       buttonWrapStyle={{marginLeft: 10}}
     />
@@ -218,6 +219,9 @@ The button inner color
 
 ### buttonSize
 The button size. Width and height will be same length.
+
+### buttonOuterSize
+The button size of outer. Width and height will be same length.
 
 ### buttonStyle
 Custom button style
