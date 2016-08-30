@@ -11,18 +11,19 @@ Demo
 
 ![Demo](./doc/ver1.3_demo.gif)
 
-# Installation
+
+## Installation
 
 in Cli
 
-```
+```sh
 npm i react-native-simple-radio-button --save
 ```
 
 
-# Example Usage
+# Getting started
 
-```
+```js
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 
 
@@ -40,7 +41,7 @@ var RadioButtonProject = React.createClass({
   render: function() {
     return (
       <View>
-        <Radio
+        <RadioForm
           radio_props={radio_props}
           initial={0}
           onPress={(value) => {this.setState({value:value})}}
@@ -53,18 +54,19 @@ var RadioButtonProject = React.createClass({
 
 Basic
 ---
-```
+
+```js
 <RadioForm
   radio_props={radio_props}
   initial={0}
   onPress={(value) => {this.setState({value:value})}}
 />
-
 ```
 
 Advanced
 ---
-```
+
+```js
 <RadioForm
   radio_props={this.state.types}
   initial={0}
@@ -78,7 +80,8 @@ Advanced
 
 Pro
 ---
-```
+
+```js
 <RadioForm
   formHorizontal={true}
   animation={true}
@@ -90,6 +93,7 @@ Pro
       index={i}
       isSelected={this.state.value3Index === i}
       onPress={onPress}
+      borderWidth={1}
       buttonInnerColor={'#e74c3c'}
       buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
       buttonSize={40}
@@ -108,9 +112,7 @@ Pro
 </RadioForm>
 ```
 
-
 # Props
-
 
 ## RadioForm Component
 ### radio_props (Default: `[]`) _*required_
@@ -122,13 +124,11 @@ callback when radio button clicked.
 ### initial (Default: `0`)
 initial selected
 
-
-
 ### buttonColor(Default: '#2196f3')
 change radio button color
 
-```
-<Radio
+```js
+<RadioForm
   radio_props={radio_props}
   initial={0}
   buttonColor={'#50C900'}
@@ -140,8 +140,8 @@ change radio button color
 ### labelColor(Default: '#000')
 change label color
 
-```
-<Radio
+```js
+<RadioForm
   radio_props={radio_props}
   initial={0}
   labelColor={'#50C900'}
@@ -149,28 +149,28 @@ change label color
 ```
 
 
-### formHoriozntal(Default: false)
+### formHorizontal(Default: false)
 change form position
 
-```
-<Radio
+```js
+<RadioForm
   radio_props={radio_props}
   initial={0}
-  formHoriozntal={true}
+  formHorizontal={true}
 />
 ```
 
 ![Demo](./doc/form_horizontal.jpg)
 
 
-### labelHoriozntal(Default: true)
+### labelHorizontal(Default: true)
 change label position
 
-```
-<Radio
+```js
+<RadioForm
   radio_props={radio_props}
   initial={0}
-  labelHoriozntal={false}
+  labelHorizontal={false}
 />
 ```
 
@@ -226,10 +226,22 @@ Custom button style
 Custom style for view of button's outside
 
 # RadioButtonLabel
+### labelHorizontal
+### labelStyle
+### labelWrapStyle
+### onPress _*required_
 
 
 # Contributing
 Of course! Welcome :)
+
+You can use following command in `example` dir:
+
+```
+npm run sync
+```
+
+During running this command, when you change source to implement/fix something, these changes will sync to `example/node_modules/react-native-simple-radio-button/`. You can check your change using example project easily.
 
 
 # License
