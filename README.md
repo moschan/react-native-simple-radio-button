@@ -231,6 +231,8 @@ Custom style for view of button's outside
 
 # RadioButtonLabel
 ### labelHorizontal
+If you pass true, the button and label will be aligned horizontally.
+
 ### labelStyle
 ### labelWrapStyle
 ### onPress _*required_
