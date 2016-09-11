@@ -12,8 +12,9 @@ import {
   View
 } from 'react-native';
 
+import Button from 'react-native-button';
+
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
-// import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from './index.js';
 
 class RadioButtonExample extends Component {
   constructor () {
@@ -37,6 +38,7 @@ class RadioButtonExample extends Component {
         <Text style={styles.welcome}>1. Basic</Text>
         <View style={styles.component}>
           <RadioForm
+            ref="radioForm"
             radio_props={this.state.types1}
             initial={0}
             formHorizontal={false}
@@ -45,12 +47,19 @@ class RadioButtonExample extends Component {
             labelColor={'#000'}
             animation={true}
             onPress={(value, index) => {
-              this.setState({value1:value})
-              this.setState({value1Index:index})
+              this.setState({
+                value1:value,
+                value1Index:index
+              })
             }}
           />
         </View>
         <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
+
+        <Button
+          style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
+          onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
+
         <Text style={styles.welcome}>2. Advanced</Text>
         <View style={styles.component}>
           <RadioForm
@@ -156,4 +165,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('RadioButtonExample', () => RadioButtonExample);
+AppRegistry.registerComponent('example', () => RadioButtonExample);
