@@ -113,6 +113,11 @@ Pro
 </RadioForm>
 ```
 
+# Methods
+
+## updateIsActiveIndex
+update active radio button
+
 # Props
 
 ## RadioForm Component
