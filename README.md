@@ -239,6 +239,8 @@ Custom style for view of button's outside
 If you pass true, the button and label will be aligned horizontally.
 
 ### labelStyle
+If you pass style, you can change label text style as you want
+
 ### labelWrapStyle
 ### onPress _*required_
 
