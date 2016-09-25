@@ -242,6 +242,8 @@ If you pass true, the button and label will be aligned horizontally.
 If you pass style, you can change label text style as you want
 
 ### labelWrapStyle
+If you pass style, you can change label wrapper view style as you want
+
 ### onPress _*required_
 
 
