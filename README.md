@@ -245,6 +245,7 @@ If you pass style, you can change label text style as you want
 If you pass style, you can change label wrapper view style as you want
 
 ### onPress _*required_
+callback when radio button clicked.
 
 
 # Contributing
