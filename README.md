@@ -192,6 +192,18 @@ if you pass false, animation of radio button is disabled
 
 ![Demo](./doc/demo_1.gif)
 
+### accessible
+indicates accessibility for the individual radio button input and radio button label components
+
+### accessibilityLabel
+used to set accessibilityLabel for individual radio button input and radio button label components,
+radio button input will have accessibilityLabel = [accessibilityLabel]Input[index]
+radio button label will have accessibilityLabel = [accessibilityLabel]Label[index]
+
+### testID
+used to set testID for individual radio button input and radio button label components,
+radio button input will have testID = [testID]Input[index]
+radio button label will have testID = [testID]Label[index]
 
 ## RadioButton Component
 ### isSelected
@@ -212,6 +224,30 @@ The label style
 ## onPress _*required_
 callback when radio button clicked.
 
+### idSeparator (Default: `|`)
+separator used for extracting id from accessibilityLabel and testID
+
+### accessible
+indicates accessibility for the wrapped radio button input and radio button label components
+
+### accessibilityLabel
+used to set accessibilityLabel for the wrapped radio button input and radio button label components, needs to be of the format [accessibilityLabel][separator][id]
+radio button input will have accessibilityLabel = [accessibilityLabel]Input[index]
+radio button label will have accessibilityLabel = [accessibilityLabel]Label[index]
+
+### testID
+used to set testID for individual radio button input and radio button label components, needs to be of the format [testID][separator][id]
+radio button input will have testID = [testID]Input[index]
+radio button label will have testID = [testID]Label[index]
+
+```js
+<RadioButton
+  accessible={true}
+  idSeparator=','
+  accessibilityLabel='noteType,1'
+  testID='noteType,1'
+/>
+```
 
 # RadioButtonInput
 ### isSelected
@@ -234,6 +270,15 @@ Custom button style
 ### buttonWrapStyle
 Custom style for view of button's outside
 
+### accessible
+indicates accessibility for the radio button input component
+
+### accessibilityLabel
+used to set accessibilityLabel (content description / label for Android) for the radio button input component
+
+### testID
+used to set testID (id / name for iOS) for the radio button input component
+
 # RadioButtonLabel
 ### labelHorizontal
 If you pass true, the button and label will be aligned horizontally.
@@ -246,6 +291,15 @@ If you pass style, you can change label wrapper view style as you want
 
 ### onPress _*required_
 callback when radio button clicked.
+
+### accessible
+indicates accessibility for the radio button label component
+
+### accessibilityLabel
+used to set accessibilityLabel (content description / label for Android) for the radio button label component
+
+### testID
+used to set testID (id / name for iOS) for the radio button label component
 
 
 # Contributing
