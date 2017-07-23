@@ -56,11 +56,12 @@ class RadioButtonExample extends Component {
               }}
             />
             <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
+
+            <Button
+              style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
+              onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
           </View>
 
-          <Button
-            style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
-            onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
 
           <Text style={styles.welcome}>2. Advanced</Text>
           <View style={styles.component}>
@@ -77,7 +78,7 @@ class RadioButtonExample extends Component {
                       isSelected={is_selected}
                       obj={obj}
                       index={i}
-                      labelHorizontal={true}
+                      labelHorizontal={false}
                       buttonColor={'#2196f3'}
                       labelColor={'#000'}
                       style={[i !== this.state.types2.length-1 && styles.radioStyle]}
@@ -120,7 +121,6 @@ class RadioButtonExample extends Component {
                     <RadioButtonLabel
                       obj={obj}
                       index={i}
-                      labelHorizontal={true}
                       onPress={onPress}
                       labelStyle={{fontWeight: 'bold', color: '#2ecc71'}}
                       labelWrapStyle={{}}
