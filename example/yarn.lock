@@ -3066,9 +3066,9 @@ react-native-button@^2.1.0:
   dependencies:
     prop-types "^15.5.10"
 
-react-native-simple-radio-button@^2.5.0-alpha.1:
-  version "2.5.0-alpha.1"
-  resolved "https://registry.yarnpkg.com/react-native-simple-radio-button/-/react-native-simple-radio-button-2.5.0-alpha.1.tgz#59d1d6a3b2db4eafc36ab675348f4e6bb89303de"
+react-native-simple-radio-button@^2.6.0:
+  version "2.6.0"
+  resolved "https://registry.yarnpkg.com/react-native-simple-radio-button/-/react-native-simple-radio-button-2.6.0.tgz#db7446da6a2c69e1858ad28452c6d5e373097cf0"
 
 react-native@0.46.4:
   version "0.46.4"
