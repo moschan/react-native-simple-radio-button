@@ -8,6 +8,7 @@ import React, { Component } from 'react';
 import {
   AppRegistry,
   StyleSheet,
+  ScrollView,
   Text,
   View
 } from 'react-native';
@@ -34,102 +35,104 @@ class RadioButtonExample extends Component {
   render () {
     return (
       <View style={styles.container}>
-        <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
-        <Text style={styles.welcome}>1. Basic</Text>
-        <View style={styles.component}>
-          <RadioForm
-            ref="radioForm"
-            radio_props={this.state.types1}
-            initial={0}
-            formHorizontal={false}
-            labelHorizontal={true}
-            buttonColor={'#2196f3'}
-            labelColor={'#000'}
-            animation={true}
-            onPress={(value, index) => {
-              this.setState({
-                value1:value,
-                value1Index:index
-              })
-            }}
-          />
-        </View>
-        <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
+        <ScrollView>
+          <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
+          <Text style={styles.welcome}>1. Basic</Text>
+          <View style={styles.component}>
+            <RadioForm
+              ref="radioForm"
+              radio_props={this.state.types1}
+              initial={0}
+              formHorizontal={false}
+              labelHorizontal={true}
+              buttonColor={'#2196f3'}
+              labelColor={'#000'}
+              animation={true}
+              onPress={(value, index) => {
+                this.setState({
+                  value1:value,
+                  value1Index:index
+                })
+              }}
+            />
+            <Text>selected: {this.state.types1[this.state.value1Index].label}</Text>
+          </View>
 
-        <Button
-          style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
-          onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
+          <Button
+            style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
+            onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
 
-        <Text style={styles.welcome}>2. Advanced</Text>
-        <View style={styles.component}>
-          <RadioForm
-            formHorizontal={true}
-            animation={true}
-          >
-            {this.state.types2.map((obj, i) => {
-              var that = this;
-              var is_selected = this.state.value2Index == i;
-              return (
-                <View key={i} style={styles.radioButtonWrap}>
-                  <RadioButton
-                    isSelected={is_selected}
-                    obj={obj}
-                    index={i}
-                    labelHorizontal={true}
-                    buttonColor={'#2196f3'}
-                    labelColor={'#000'}
-                    style={[i !== this.state.types2.length-1 && styles.radioStyle]}
-                    onPress={(value, index) => {
-                      this.setState({value2:value})
-                      this.setState({value2Index: index});
-                    }}
-                  />
-                </View>
-              )
-            })}
-          </RadioForm>
-        </View>
-        <Text>selected: {this.state.types2[this.state.value2Index].label}</Text>
+          <Text style={styles.welcome}>2. Advanced</Text>
+          <View style={styles.component}>
+            <RadioForm
+              formHorizontal={true}
+              animation={true}
+            >
+              {this.state.types2.map((obj, i) => {
+                var that = this;
+                var is_selected = this.state.value2Index == i;
+                return (
+                  <View key={i} style={styles.radioButtonWrap}>
+                    <RadioButton
+                      isSelected={is_selected}
+                      obj={obj}
+                      index={i}
+                      labelHorizontal={true}
+                      buttonColor={'#2196f3'}
+                      labelColor={'#000'}
+                      style={[i !== this.state.types2.length-1 && styles.radioStyle]}
+                      onPress={(value, index) => {
+                        this.setState({value2:value})
+                        this.setState({value2Index: index});
+                      }}
+                    />
+                  </View>
+                )
+              })}
+            </RadioForm>
+            <Text>selected: {this.state.types2[this.state.value2Index].label}</Text>
+          </View>
 
-        <Text style={styles.welcome}>3. Pro</Text>
-        <View style={styles.component}>
-          <RadioForm formHorizontal={true} animation={true} >
-            {this.state.types3.map((obj, i) => {
-              var onPress = (value, index) => {
-                  this.setState({
-                    value3: value,
-                    value3Index: index
-                  })
-                }
-              return (
-                <RadioButton labelHorizontal={true} key={i} >
-                  {/*  You can set RadioButtonLabel before RadioButtonInput */}
-                  <RadioButtonInput
-                    obj={obj}
-                    index={i}
-                    isSelected={this.state.value3Index === i}
-                    onPress={onPress}
-                    buttonInnerColor={'#e74c3c'}
-                    buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
-                    buttonSize={40}
-                    buttonStyle={{}}
-                    buttonWrapStyle={{marginLeft: 10}}
-                  />
-                  <RadioButtonLabel
-                    obj={obj}
-                    index={i}
-                    labelHorizontal={true}
-                    onPress={onPress}
-                    labelStyle={{fontSize: 20, color: '#2ecc71'}}
-                    labelWrapStyle={{}}
-                  />
-                </RadioButton>
-              )
-            })}
-          </RadioForm>
-        </View>
-        <Text>selected: {this.state.types3[this.state.value3Index].label}</Text>
+          <Text style={styles.welcome}>3. Pro</Text>
+          <View style={styles.component}>
+            <RadioForm formHorizontal={true} animation={true} >
+              {this.state.types3.map((obj, i) => {
+                var onPress = (value, index) => {
+                    this.setState({
+                      value3: value,
+                      value3Index: index
+                    })
+                  }
+                return (
+                  <RadioButton labelHorizontal={true} key={i} >
+                    {/*  You can set RadioButtonLabel before RadioButtonInput */}
+                    <RadioButtonInput
+                      obj={obj}
+                      index={i}
+                      isSelected={this.state.value3Index === i}
+                      onPress={onPress}
+                      buttonInnerColor={'#f39c12'}
+                      buttonOuterColor={this.state.value3Index === i ? '#2196f3' : '#000'}
+                      buttonSize={30}
+                      buttonStyle={{}}
+                      buttonWrapStyle={{marginLeft: 10}}
+                    />
+                    <RadioButtonLabel
+                      obj={obj}
+                      index={i}
+                      labelHorizontal={true}
+                      onPress={onPress}
+                      labelStyle={{fontWeight: 'bold', color: '#2ecc71'}}
+                      labelWrapStyle={{}}
+                    />
+                  </RadioButton>
+                )
+              })}
+            </RadioForm>
+            <Text>selected: {this.state.types3[this.state.value3Index].label}</Text>
+          </View>
 
+        </ScrollView>
       </View>
     );
   }
@@ -138,14 +141,14 @@ class RadioButtonExample extends Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: '#F5FCFF',
   },
   welcome: {
     fontSize: 20,
     textAlign: 'center',
-    margin: 10,
+    marginTop: 20,
+    marginBottom: 20,
   },
   instructions: {
     textAlign: 'center',
@@ -153,7 +156,8 @@ const styles = StyleSheet.create({
     marginBottom: 5,
   },
   component: {
-    marginBottom: 15,
+    alignItems: 'center',
+    marginBottom: 50,
   },
   radioStyle: {
     borderRightWidth: 1,
@@ -165,4 +169,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('example', () => RadioButtonExample);
+AppRegistry.registerComponent('RadioButtonExample', () => RadioButtonExample);
