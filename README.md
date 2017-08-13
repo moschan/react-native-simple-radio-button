@@ -129,6 +129,7 @@ callback when radio button clicked.
 
 ### initial (Default: `0`)
 initial selected
+> If you want to make it empty initially, please pass `-1`
 
 ### buttonColor(Default: '#2196f3')
 change radio button color

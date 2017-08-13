@@ -24,6 +24,8 @@ class RadioButtonExample extends Component {
       types1: [{label: 'param1', value: 0}, {label: 'param2', value: 1}],
       value1: 0,
       value1Index: 0,
+      value1_1: 0,
+      value1_1Index: 0,
       types2: [{label: 'param1', value: 0}, {label: 'param2', value: 1}, {label: 'param3', value: 2},],
       value2: 0,
       value2Index: 0,
@@ -38,6 +40,7 @@ class RadioButtonExample extends Component {
         <ScrollView>
           <Text style={styles.welcome}>React Native Simple Radio Button Demo</Text>
           <Text style={styles.welcome}>1. Basic</Text>
+
           <View style={styles.component}>
             <RadioForm
               ref="radioForm"
@@ -60,6 +63,20 @@ class RadioButtonExample extends Component {
             <Button
               style={{fontSize: 20, borderColor: '#2196f3', borderWidth: 2}}
               onPress={() => this.refs.radioForm.updateIsActiveIndex(0)}> Force Update </Button>
+          </View>
+
+          <View style={styles.component}>
+            <Text style={styles.welcome}>No initial set</Text>
+            <RadioForm
+              initial={-1}
+              radio_props={this.state.types1}
+              onPress={(value, index) => {
+                this.setState({
+                  value1_1:value,
+                  value1_1Index:index
+                })
+              }}
+            />
           </View>
 
 
