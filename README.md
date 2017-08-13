@@ -116,7 +116,7 @@ Pro
 # Methods
 
 ## updateIsActiveIndex
-update active radio button
+Updating active radio button forcibly
 
 # Props
 
@@ -128,7 +128,8 @@ radio button value and label array
 callback when radio button clicked.
 
 ### initial (Default: `0`)
-initial selected
+The index of selected raio button. This is used when this component is activated. If you want to
+pass initial as asynchronous, you can use updateIsActiveIndex function.
 > If you want to make it empty initially, please pass `-1`
 
 ### buttonColor(Default: '#2196f3')
