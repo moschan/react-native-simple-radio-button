@@ -223,6 +223,9 @@ The label color
 ### style
 The label style
 
+### wrapStyle
+Styles that are applied to the <View> wrapping the RadioButton component.
+
 ## onPress _*required_
 callback when radio button clicked.
 
