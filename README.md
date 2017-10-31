@@ -193,11 +193,6 @@ if you pass false, animation of radio button is disabled
 
 ![Demo](./doc/demo_1.gif)
 
-### animation (Default: `true`)
-if you pass false, animation of radio button is disabled
-
-![Demo](./doc/demo_1.gif)
-
 ### accessible
 indicates accessibility for the individual radio button input and radio button label components
 
