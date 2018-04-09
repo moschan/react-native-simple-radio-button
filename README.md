@@ -216,6 +216,9 @@ change label position to horizontal
 ### buttonColor
 The button color
 
+### selectedButtonColor
+The selected button color
+
 ### labelColor
 The label color
 
