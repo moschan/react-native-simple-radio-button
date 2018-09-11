@@ -83,6 +83,7 @@ Pro
 
 ```js
 <RadioForm
+  radio_props={radio_props}
   formHorizontal={true}
   animation={true}
 >
