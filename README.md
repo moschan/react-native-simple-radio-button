@@ -87,7 +87,7 @@ Pro
   animation={true}
 >
   {/* To create radio buttons, loop through your array of options */}
-  {radio_props.map((obj, i) => {
+  {radio_props.map((obj, i) => (
     <RadioButton labelHorizontal={true} key={i} >
       {/*  You can set RadioButtonLabel before RadioButtonInput */}
       <RadioButtonInput
@@ -112,7 +112,7 @@ Pro
         labelWrapStyle={{}}
       />
       </RadioButton>
-  })}
+  ))}
   
 </RadioForm>
 ```
