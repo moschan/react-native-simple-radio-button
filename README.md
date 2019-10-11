@@ -28,8 +28,8 @@ import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-
 
 
 var radio_props = [
-  {label: 'param1', value: 0 },
-  {label: 'param2', value: 1 }
+  {label: 'param1' || <Component>, value: 0 },
+  {label: 'param2' || <Component>, value: 1 }
 ];
 
 var RadioButtonProject = React.createClass({
@@ -113,7 +113,7 @@ Pro
       />
       </RadioButton>
   })}
-  
+
 </RadioForm>
 ```
 
