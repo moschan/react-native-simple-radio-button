@@ -199,7 +199,7 @@ indicates accessibility for the individual radio button input and radio button l
 
 ### accessibilityLabel
 used to set accessibilityLabel for individual radio button input and radio button label components,
-radio button input will have accessibilityLabel = [accessibilityLabel]Input[index]
+radio button input will have accessibilityLabel = [accessibilityLabel]Radio Button[index]
 radio button label will have accessibilityLabel = [accessibilityLabel]Label[index]
 
 ### testID
